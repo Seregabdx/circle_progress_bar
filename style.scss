@@ -1,3 +1,19 @@
+@mixin switch {
+  & + label {
+    display: block;
+    width: 51px;
+    height: 31px;
+    background: url("../img/switch/On.png");
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  &:checked + label {
+    background: url("../img/switch/Off.png") no-repeat center;
+  }
+}
+
 html,
 body {
   background-color: aqua;
@@ -6,14 +22,54 @@ body {
   align-items: center;
   position: relative;
   height: 100%;
-}
-.progressRing {
-  width: 30px;
-  height: 30px;
-  //stroke-dasharray: 500 20;
-}
+  display: flex;
+  flex-direction: row;
+  .progressBar {
+    width: 120px;
+    height: 120px;
+  }
 
-.progressBar {
-  width: 120px;
-  height: 120px;
+  .inputBlock {
+    margin-left: 20px;
+    .text {
+      margin: auto;
+      margin-left: 20px;
+    }
+    .input {
+      display: flex;
+      flex-direction: row;
+      .inputPercent {
+        border-radius: 20px;
+        border: 1px solid #d0c4db;
+        outline: none;
+        height: 30px;
+        width: 45px;
+        text-align: center;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    }
+    .switch-container-switch {
+      display: flex;
+      flex-direction: row;
+      margin: 10px 0px;
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      &--active {
+        @include switch;
+      }
+      &--disable {
+        @include switch;
+      }
+    }
+    .switchAnimate {
+    }
+  }
 }

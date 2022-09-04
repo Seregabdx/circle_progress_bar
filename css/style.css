@@ -6,14 +6,84 @@ body {
   align-items: center;
   position: relative;
   height: 100%;
+  display: flex;
+  flex-direction: row;
 }
-
-.progressRing {
-  width: 30px;
-  height: 30px;
-}
-
-.progressBar {
+html .progressBar,
+body .progressBar {
   width: 120px;
   height: 120px;
+}
+html .inputBlock,
+body .inputBlock {
+  margin-left: 20px;
+}
+html .inputBlock .text,
+body .inputBlock .text {
+  margin: auto;
+  margin-left: 20px;
+}
+html .inputBlock .input,
+body .inputBlock .input {
+  display: flex;
+  flex-direction: row;
+}
+html .inputBlock .input .inputPercent,
+body .inputBlock .input .inputPercent {
+  border-radius: 20px;
+  border: 1px solid #d0c4db;
+  outline: none;
+  height: 30px;
+  width: 45px;
+  text-align: center;
+}
+html .inputBlock .input input::-webkit-outer-spin-button,
+html .inputBlock .input input::-webkit-inner-spin-button,
+body .inputBlock .input input::-webkit-outer-spin-button,
+body .inputBlock .input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+html .inputBlock .input input[type=number],
+body .inputBlock .input input[type=number] {
+  -moz-appearance: textfield;
+}
+html .inputBlock .switch-container-switch,
+body .inputBlock .switch-container-switch {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px;
+}
+html .inputBlock .switch-container-switch input[type=checkbox],
+body .inputBlock .switch-container-switch input[type=checkbox] {
+  display: none;
+}
+html .inputBlock .switch-container-switch--active + label,
+body .inputBlock .switch-container-switch--active + label {
+  display: block;
+  width: 51px;
+  height: 31px;
+  background: url("../img/switch/On.png");
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+html .inputBlock .switch-container-switch--active:checked + label,
+body .inputBlock .switch-container-switch--active:checked + label {
+  background: url("../img/switch/Off.png") no-repeat center;
+}
+html .inputBlock .switch-container-switch--disable + label,
+body .inputBlock .switch-container-switch--disable + label {
+  display: block;
+  width: 51px;
+  height: 31px;
+  background: url("../img/switch/On.png");
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+html .inputBlock .switch-container-switch--disable:checked + label,
+body .inputBlock .switch-container-switch--disable:checked + label {
+  background: url("../img/switch/Off.png") no-repeat center;
 }

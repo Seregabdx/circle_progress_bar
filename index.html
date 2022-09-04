@@ -9,6 +9,42 @@
   </head>
   <body>
     <div class="progressBar"></div>
+    <div class="inputBlock">
+      <div class="input">
+        <input
+          min="0"
+          max="100"
+          value="100"
+          type="number"
+          class="inputPercent"
+        />
+        <div class="text">Value</div>
+      </div>
+      <div class="switchAnimate">
+        <div class="switch-container-switch">
+          <input
+            id="switch-1"
+            class="switch-container-switch--active"
+            type="checkbox"
+            checked
+          />
+          <label for="switch-1"></label>
+          <div class="text">Animate</div>
+        </div>
+      </div>
+      <div class="switchHidden">
+        <div class="switch-container-switch">
+          <input
+            id="switch-2"
+            class="switch-container-switch--active"
+            type="checkbox"
+            checked
+          />
+          <label for="switch-2"></label>
+          <div class="text">Hide</div>
+        </div>
+      </div>
+    </div>
     <script src="/progressbar.js"></script>
     <script src="/script.js"></script>
   </body>
