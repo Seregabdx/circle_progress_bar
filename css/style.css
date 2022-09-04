@@ -1,0 +1,19 @@
+html,
+body {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.progressRing {
+  width: 30px;
+  height: 30px;
+}
+
+.progressBar {
+  width: 120px;
+  height: 120px;
+}
