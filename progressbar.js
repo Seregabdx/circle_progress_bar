@@ -12,7 +12,7 @@ const ProgressBar = (function () {
       progressBar.setAttribute("class", "progress");
       progressBar.setAttribute("height", "120px");
       progressBar.setAttribute("width", "120px");
-      progressBar.innerHTML = `<circle class="progressRing" stroke="white" stroke-width="4" cx="60" cy="60" r="52" fill="transparent" />`;
+      progressBar.innerHTML = `<circle class="progressRing" stroke="blue" stroke-width="4" cx="60" cy="60" r="52" fill="transparent" />`;
       progressBarContainer.appendChild(progressBar);
       this.progressRing = progressBarContainer.querySelector(".progressRing");
       this.progressRing.style.width = "30px";
@@ -30,7 +30,6 @@ const ProgressBar = (function () {
     changeValue(value) {
       let offset = this.longCircle - (value / 100) * this.longCircle;
       this.progressRing.style.strokeDashoffset = offset;
-      console.log(offset);
     }
   }
 

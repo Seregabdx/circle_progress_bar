@@ -12,7 +12,6 @@ input.oninput = (e) => {
   }
 
   value = e.target.value;
-  //console.log(value);
   progressBar.changeValue(e.target.value);
 };
 
